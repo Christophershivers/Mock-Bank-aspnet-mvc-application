@@ -1,0 +1,68 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using The_Bank_of_Cardinal.Areas.Identity.Data
+
+@inject SignInManager<CardinalUser> SignInManager
+@inject UserManager<CardinalUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+
+
+}
+
+
+<style>
+
+    .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+    }
+
+    body {
+        background-image: url('~/images/dafa7eaa657c403c7e74bf4bf8db1cee.jpg');
+        margin: 0;
+    }
+
+    
+</style>
+
+
+    
+
+
+
+
+
+
+<div class="text-center">
+    <h1 class="display-4">The Bank of Cardinal</h1>
+    <p>Why settle for less?</a></p>
+
+
+
+</div>
+
+<div class="card" style="width: 50rem;">
+
+    <div id="card" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/App.jpg" class="d-block w-100" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="~/images/business.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="~/images/savings.jpg" alt="Third slide">
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title">The Bank of Cardinal</h5>
+        <p class="card-text">Start your new adventure.</p>
+        <a asp-action="Account" asp-controller="Identity" asp-route-id="Register" class="btn btn-primary">Sign up!</a>
+        <a asp-action="Account" asp-controller="Identity" asp-route-id="Login" class="btn btn-primary">Login!</a>
+    </div>
+</div>

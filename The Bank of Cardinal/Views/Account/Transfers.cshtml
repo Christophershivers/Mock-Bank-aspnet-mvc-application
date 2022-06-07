@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using The_Bank_of_Cardinal.Areas.Identity.Data
+
+@inject SignInManager<CardinalUser> SignInManager
+@inject UserManager<CardinalUser> UserManager
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    h1 {
+        text-align: center
+    }
+</style>
+<h1>Transfers</h1>
+<p1> Welcome to the transfer page. Here you can transfer money to users, pay your bills, or update payee information. Please choose a selection</p1>
+
+<div class="alert alert-primary" role="alert">
+    <div>
+        <div class="left"><p1> To send money to users please click <a asp-action="Payee" asp-controller="Account" asp-route-id="@UserManager.GetUserAsync(User).Result.Id">here</a></p1></div>
+    </div>
+
+
+</div>
+
+<div class="alert alert-primary" role="alert">
+    <div>
+        <div class="left"><p1> To pay your bills please click <a asp-action="BillPay" asp-controller="Account" asp-route-id="@UserManager.GetUserAsync(User).Result.Id">here</a></p1></div>
+    </div>
+
+
+</div>
+
+<div class="alert alert-primary" role="alert">
+    <div>
+        <div class="left"><p1> To create a payee please click <a asp-action="AddPayee" asp-controller="Account">here</a></p1></div>
+    </div>
+
+
+</div>
